@@ -25,6 +25,11 @@ public class Calculator {
         int total = 0;
 
         //TODO: List에 담긴 값 중 3보다 큰 수만을 더해야 한다.
+        total = numbers.stream()
+                .filter(integer -> integer > 3)
+                .mapToInt(Integer::intValue)
+                .sum();
+
 
         return total;
     }
